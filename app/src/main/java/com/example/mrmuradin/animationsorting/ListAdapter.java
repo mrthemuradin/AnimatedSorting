@@ -14,7 +14,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
 
     List<String> dataList;
 
-    public ListAdapter(List<String> dataList) {
+    public void setData(List<String> dataList) {
         this.dataList = dataList;
     }
 
