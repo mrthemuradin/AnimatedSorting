@@ -3,7 +3,7 @@ package com.example.mrmuradin.animationsorting.presenter;
 
 import android.content.Context;
 
-import com.example.mrmuradin.animationsorting.ListAdapter;
+import com.example.mrmuradin.animationsorting.adapter.ListAdapter;
 import com.example.mrmuradin.animationsorting.R;
 import com.example.mrmuradin.animationsorting.view.SortingView;
 
@@ -38,12 +38,10 @@ public class SortingPresenterImpl implements SortingPresenter {
         iterationsCounter = dataList.size() - 1;
         sortingView.blockButtons(true);
         startSorting();
-
     }
 
     @Override
     public void onShuffleClick() {
-
         Collections.shuffle(dataList, new Random(System.nanoTime()));
         mAdapter.notifyDataSetChanged();
     }
@@ -68,7 +66,6 @@ public class SortingPresenterImpl implements SortingPresenter {
             sortingView.blockButtons(false);
             return;
         }
-
         if (previousIterPosition.isEmpty()) currentIterPosition = iter.next();
 
         if (iter.hasNext()) {
@@ -91,8 +88,6 @@ public class SortingPresenterImpl implements SortingPresenter {
             currentIterPosition = "";
             iterationsCounter--;
             startSorting();
-
         }
-
     }
 }

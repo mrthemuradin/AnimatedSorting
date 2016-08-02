@@ -1,4 +1,4 @@
-package com.example.mrmuradin.animationsorting;
+package com.example.mrmuradin.animationsorting.adapter;
 
 
 import android.support.v7.widget.RecyclerView;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+
+import com.example.mrmuradin.animationsorting.R;
 
 import java.util.List;
 

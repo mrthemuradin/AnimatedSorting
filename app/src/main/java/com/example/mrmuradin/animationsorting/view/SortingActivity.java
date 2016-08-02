@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.mrmuradin.animationsorting.ListAdapter;
+import com.example.mrmuradin.animationsorting.adapter.ListAdapter;
 import com.example.mrmuradin.animationsorting.R;
 import com.example.mrmuradin.animationsorting.presenter.SortingPresenter;
 import com.example.mrmuradin.animationsorting.presenter.SortingPresenterImpl;
@@ -68,9 +68,6 @@ public class SortingActivity extends AppCompatActivity implements SortingView{
             @Override
             public void onClick(View v) {
                 presenter.onShuffleClick();
-
-//                Collections.onShuffleClick(dataList, new Random(System.nanoTime()));
-//                mAdapter.notifyDataSetChanged();
             }
         });
     }
@@ -86,42 +83,6 @@ public class SortingActivity extends AppCompatActivity implements SortingView{
         tvShuffle.setEnabled(!needToBlock);
         tvStart.setEnabled(!needToBlock);
     }
-
-
-//    private void startSorting() {
-////        Log.d("myLogs", "iterations counter = " + iterationsCounter + ", dataList.size = " + dataList.size());
-//        if (iterationsCounter < 1) {
-//            blockButtons(false);
-//            return;
-//        }
-//
-//        if (previous.isEmpty()) current = iter.next();
-//
-//        if (iter.hasNext()) {
-//            final String next = iter.next();
-////            Log.d("myLogs", "===   current = " + current + ", next = " + next + ", previous =" + previous);
-//            if (Integer.valueOf(current) > Integer.valueOf(next)) {
-//                Collections.swap(dataList, dataList.indexOf(current), dataList.indexOf(next));
-//                mAdapter.notifyItemMoved(dataList.indexOf(current), dataList.indexOf(next));
-//                previous = next;
-////                Log.d("myLogs", "===>   current = " + current + ", previous =" + previous);
-//            } else {
-//                previous = current;
-//                current = next;
-//                startSorting();
-//            }
-//
-//        } else {
-//            iter = dataList.listIterator();
-//            previous = "";
-//            current = "";
-//            iterationsCounter--;
-//            startSorting();
-//
-//        }
-//
-//    }
-
 
 }
 
